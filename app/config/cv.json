@@ -1,0 +1,60 @@
+{
+  "autodesk": {
+    "name": "Autodesk, Inc. (Globant Contractor)",
+    "url": "https://www.autodesk.com/",
+    "description": "Autodesk, Inc. is an American multinational software corporation that makes software products and services for the architecture, engineering, construction, manufacturing, media, education, and entertainment industries.",
+    "contribution": [
+      "Migrated various functionalities and components from their old BIM360 legacy project (in Ruby and handlebars) to the new ACC Platform (in NodeJS and React)"
+    ]
+  },
+
+  "latam": {
+    "name": "LATAM Airlines Group S.A (Globant Contractor)",
+    "url": "https://www.latamairlines.com/",
+    "description": "LATAM Airlines Group S.A. is an airline holding company headquartered in Santiago, Chile. It is considered the largest airline in Latin America with subsidiaries in Brazil, Colombia, Ecuador, Paraguay and Peru.",
+    "contribution": [
+      "Rebuilt Latam Airlines Corporate Site, with new technologies, look, features, and faster loading time, without sacrificing accessibility, which was well received by recurrent users and helped to reach new customers. It ended up incrementing the airline’s income by 12%.",
+      "Developed an UI component library for unifying design, functionality and a11y across Latam frontend projects that later grew up into a design system and became the standard.",
+      "Lead a team of six engineers for the development of the Latam Mobile App, where we were able to bring the app to the PlayStore and the AppStore  on a record time of less than three months with minimal updates. "
+    ]
+  },
+
+  "globant": {
+    "name": "Globant",
+    "url": "https://www.globant.com/",
+    "description": "Globant is an Argentinian IT and Software Development company currently headquartered in Luxembourg. It is considered to be one of the four Argentina Unicorns, among Mercado Libre, OLX, and Despegar.",
+    "contribution": [
+      "Provided great software solutions to two of the company clients.",
+      "Mentored 3 Jr Web UI Developers, enabling them to achieve professional growth and personal goals."
+    ]
+  },
+
+  "mediastream": {
+    "name": "Mediastream, SPA.",
+    "url": "https://www.mediastre.am/",
+    "description": "Mediastream, SPA. is the leading streaming company in Latin America, with more than 12 years of experience.",
+    "contribution": [
+      "Developed several Web, Mobile and backend applications with React, React Native and Serverless architecture.",
+      "Created a highly functional and configurable Mobile and Web App builders for generating OTT Apps effortlessly, which helped to reduce the development time from 3 – 4 months to 3 - 4 days."
+    ]
+  },
+
+  "webgains": {
+    "name": "Webgains, Ltd.",
+    "url": "https://www.webgains.com/",
+    "description": "Webgains, Ltd. is a performance affiliate marketing company based in Bristol, UK.",
+    "contribution": [
+      "Re-implemented their legacy Affiliate Marketing frontend platform with new technologies and a fresh look and feel.",
+      "Backend application containerization, which reduced the installation times for new entries from 2 – 3 days to 1 hour."
+    ]
+  },
+
+  "opentech": {
+    "name": "LCC Open Tech",
+    "url": "https://lccopen.tech/",
+    "description": "LCC Open Tech is a B2B Software and marketing house based in Puerto Ordaz, Venezuela.",
+    "contribution": [
+      "Planned and developed small to medium sized applications, with a variety of technologies. Django, NodeJs, Laravel, AngularJs, Ionic, etc."
+    ]
+  }
+}

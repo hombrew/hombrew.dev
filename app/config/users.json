@@ -1,0 +1,12 @@
+{
+  "hombrew": {
+    "name": "Manuel Maldonado",
+    "description": "A Fullstack, Frontend oriented, motivated, and analytical IT professional, helping companies create and maintain a better code base for reusability, with demonstrated experience in several areas of the industry. Skilled in Javascript, React, a11y, Python, AWS, Docker, among others. Eager to tackle more complex problems to be able to deliver better user interfaces.",
+    "location": "Santiago de Chile, Chile!"
+  },
+  "root": {
+    "name": "The Chosen One",
+    "description": "The One, also known as the Prime Program, is a systemic feature of the Matrix wherein a special code is carried by a randomly selected human being.",
+    "location": "127.0.0.1"
+  }
+}
