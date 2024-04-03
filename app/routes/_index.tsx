@@ -1,7 +1,7 @@
-import type { MetaFunction, LinksFunction } from "remix";
-import xtermStyles from "xterm/css/xterm.css";
+import type { MetaFunction, LinksFunction } from "@remix-run/node";
+import xtermStyles from "xterm/css/xterm.css?url";
 import { Console } from "~/components";
-import styles from "~/styles/index.css";
+import styles from "~/styles/index.css?url";
 
 export const links: LinksFunction = () => {
   return [
@@ -11,10 +11,12 @@ export const links: LinksFunction = () => {
 };
 
 export const meta: MetaFunction = () => {
-  return {
-    title: "Manuel Maldonado",
-    description: "The Matrix",
-  };
+  return [
+    {
+      title: "Manuel Maldonado",
+      description: "The Matrix",
+    },
+  ];
 };
 
 export default function Index() {
