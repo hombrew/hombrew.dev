@@ -2,8 +2,10 @@ import { Terminal as BaseTerminal } from "xterm";
 import type { ITerminalOptions } from "xterm";
 import { FitAddon } from "xterm-addon-fit";
 import { WebLinksAddon } from "xterm-addon-web-links";
-import { _wordWrap, colorText, getCommands, logo } from "./common.client";
-import type { Commands } from "./common.client";
+import { _wordWrap, colorText } from "./utils";
+import { logo } from "./asciiArt";
+import { getCommands } from "./commands";
+import type { Commands } from "./commands";
 import { TERMINAL_MAX_WIDTH } from "~/config/constants";
 
 type DataLayerItem = {

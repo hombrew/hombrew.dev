@@ -1,4 +1,4 @@
-import { Terminal } from "./common.client";
+import type { Terminal } from "./Terminal.client";
 import users from "~/config/users.json";
 
 export type Commands =

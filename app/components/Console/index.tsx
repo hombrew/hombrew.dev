@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Terminal } from "./common.client";
+import { Terminal } from "./Terminal.client";
 
 export function Console() {
   React.useEffect(() => {
