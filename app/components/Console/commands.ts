@@ -1,24 +1,20 @@
 import { Terminal } from "./common.client";
 import users from "~/config/users.json";
-import cv from "~/config/cv.json";
-import { TERMINAL_MAX_WIDTH } from "~/config/constants";
 
 export type Commands =
   | "clear"
-  | "cv"
+  | "resume"
   | "email"
   | "github"
   | "help"
   | "telegram"
   | "test"
   | "twitter"
-  | "whois";
+  | "whoami";
 
 const help = {
-  "%whois%": "list all users",
-  "%whois% [user]": "learn about us",
-  "%cv%": "list all cv companies",
-  "%cv% [company_name]": "learn about a cv company",
+  "%whoami%": "summary",
+  "%resume%": "go to resume",
   "%email%": "reach out to me",
   "%twitter%": "twitter account",
   "%github%": "all repos",
@@ -31,53 +27,16 @@ export function getCommands(term: Terminal): Record<Commands, Function> {
       term.init();
     },
 
-    cv: function ([name]: [string] = [""]) {
-      if (!name) {
-        const companies = Object.keys(cv);
-        term.stylePrint("%cv%: Learn about a cv company - usage:\r\n");
-        for (const company of companies) {
-          const data = cv[company as keyof typeof cv];
-          const sep = term.cols >= TERMINAL_MAX_WIDTH ? "\t" : "\r\n";
-          term.stylePrint(`%cv% ${company}${sep}${data.url}`);
-          if (
-            term.cols < TERMINAL_MAX_WIDTH &&
-            company !== companies[companies.length - 1]
-          ) {
-            term.writeln("");
-          }
-        }
-
-        return;
-      }
-
-      if (!cv[name as keyof typeof cv]) {
-        term.stylePrint(
-          `cv company ${name} not found. Should I talk to them? Email me: mmaldonadortiz92@gmail.com`
-        );
-
-        return;
-      }
-
-      const company = cv[name as keyof typeof cv];
-      term.stylePrint(company["name"]);
-      term.stylePrint(company["url"]);
-      term.stylePrint("");
-      term.stylePrint(company["description"]);
-      if (company["contribution"]) {
-        term.stylePrint("\r\nHow I contributed:");
-        company["contribution"].forEach((contribution) => {
-          term.writeln("");
-          term.stylePrint(`- ${contribution}`);
-        });
-      }
+    resume: function () {
+      term.openURL("https://hombrew.github.io/resume/");
     },
 
     email: function () {
-      term.openURL("mailto:mmaldonadortiz92@gmail.com");
+      term.stylePrint("mmaldonadortiz92@gmail.com");
     },
 
     github: function () {
-      term.displayURL("https://github.com/hombrew");
+      term.openURL("https://github.com/hombrew");
     },
 
     help: function () {
@@ -109,29 +68,12 @@ export function getCommands(term: Terminal): Record<Commands, Function> {
     },
 
     twitter: function () {
-      term.displayURL("https://twitter.com/hombrew");
+      term.openURL("https://twitter.com/hombrew");
     },
 
-    whois: function ([name]: [string]): void {
+    whoami: function (): void {
       const people = Object.keys(users);
-
-      if (!name) {
-        term.stylePrint("%whois%: Learn about us - usage:\r\n");
-        for (const person of people) {
-          term.stylePrint(`%whois% ${person}`);
-        }
-        return;
-      }
-
-      if (!people.includes(name)) {
-        term.stylePrint(`User ${name || ""} not found. Try:\r\n`);
-        for (const person of people) {
-          term.stylePrint(`%whois% ${person}`);
-        }
-        return;
-      }
-
-      const person = users[name as keyof typeof users];
+      const person = users.hombrew;
       term.stylePrint(`${person.name}`);
       term.stylePrint(`\r\n${person.description}`);
       term.writeln("");
